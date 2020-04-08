@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="home_container">
+    <h3 class="heading">GifChat</h3>
+    <img
+      class="home_img"
+      src="https://media1.giphy.com/media/11sBLVxNs7v6WA/giphy.gif?cid=88e77dabf615d71eb52745daae51e58094cc5f82bb192779&rid=giphy.gif"
+    />
+    <form
+      class="login_form"
+      name="form"
+      (ngSubmit)="f.form.valid && updateUser()"
+      #f="ngForm"
+    >
+      <div class="user_input_div">
+        <input
+          class="user_input"
+          placeholder="Name"
+          [(ngModel)]="currentUser"
+          [ngModelOptions]="{ standalone: true }"
+          #user="ngModel"
+          autofocus
+          required
+        />
+        <!-- <div *ngIf="f.submitted && user.invalid" > -->
+        <p
+          class="invalid_feedback"
+          *ngIf="f.submitted && user.invalid && user.errors.required"
+        >
+          * Required
+        </p>
+      </div>
+      <!-- </div> -->
+      <button class="enter">
+        Enter
+      </button>
+    </form>
+  </div>
+</div>

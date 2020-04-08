@@ -1,0 +1,37 @@
+<!-- <img
+  class="img_message"
+  *ngIf="message.type === 'image'"
+  src="{{ message.src }}"
+  [ngClass]="message.userName === currentUser ? 'sent' : 'received'"
+/> -->
+
+<div
+  *ngIf="message.type === 'image'"
+  class="message_text"
+  [ngClass]="message.userName === currentUser ? 'sent' : 'received'"
+>
+  <p class="username" *ngIf="message.userName != currentUser">
+    {{ message.userName | username }}
+  </p>
+  <img
+    class="img_message"
+    src="{{ message.src }}"
+    [ngClass]="message.userName === currentUser ? 'sent' : 'received'"
+  />
+</div>
+
+<!-- [ngClass]="message.userName === currentUser ? 'sent' : 'received'" -->
+<div
+  *ngIf="message.type === 'text'"
+  class="message_text"
+  [ngClass]="message.userName === currentUser ? 'sent' : 'received'"
+>
+  <p class="username" *ngIf="message.userName != currentUser">
+    {{ message.userName | username }}
+  </p>
+  <p class="message">{{ message.text }}</p>
+</div>
+<span class="user_joined" *ngIf="message.type === 'joined'">
+  {{ message.userName === currentUser ? "You" : (message.userName | username) }}
+  joined
+</span>

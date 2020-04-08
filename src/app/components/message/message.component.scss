@@ -1,0 +1,56 @@
+.user_joined {
+  text-align: center;
+  background-color: #3b3b3b;
+  font-size: 10px;
+  padding: 5px 10px;
+  /* margin: 10px; */
+  font-style: italic;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.sent {
+  position: relative;
+  left: 0px;
+  background-color: #10559a;
+  text-align: left;
+}
+
+.received {
+  position: relative;
+  left: 100%;
+  transform: translateX(-100%);
+  background-color: #a31670;
+  text-align: right;
+}
+
+.message_text {
+  font-size: 14px;
+  padding: 5px 10px;
+  max-width: 60%;
+  margin: 0px;
+  border-radius: 5px;
+}
+
+.message {
+  margin: 0px;
+}
+
+.img_message {
+  width: 120px;
+  height: 120px;
+  border-radius: 5px;
+  background-position: center;
+  background-size: cover;
+}
+
+.username {
+  margin: 0px;
+  margin-bottom: 2px;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1.1px;
+  font-style: italic;
+  color: #f9c6d7;
+}

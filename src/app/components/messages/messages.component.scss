@@ -1,0 +1,9 @@
+.messages_container {
+  display: flex;
+  flex-direction: column;
+}
+
+.message_box {
+  margin: 5px 10px;
+  display: flex;
+}

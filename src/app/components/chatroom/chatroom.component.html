@@ -1,0 +1,23 @@
+<div class="modal" *ngIf="modal" (click)="closeModal($event)">
+  <div class="app_giphy_container">
+    <app-giphy (close)="closeModal()"></app-giphy>
+  </div>
+</div>
+<div class="chatroom_container">
+  <div class="chat_container">
+    <app-messages [messages]="messages"></app-messages>
+  </div>
+  <div class="message_container">
+    <button class="gif_button" type="button" (click)="openGiphy()">GIF</button>
+    <form class="input_form" (submit)="sendMessage()">
+      <input
+        class="input"
+        [(ngModel)]="currentMessage"
+        [ngModelOptions]="{ standalone: true }"
+      />
+      <button class="send_button">
+        <fa-icon [icon]="faPaperPlane"></fa-icon>
+      </button>
+    </form>
+  </div>
+</div>

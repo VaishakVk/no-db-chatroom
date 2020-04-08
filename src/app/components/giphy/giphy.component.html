@@ -1,0 +1,19 @@
+<div class="giphy_container">
+  <div class="input_container">
+    <input
+      class="search"
+      [(ngModel)]="searchString"
+      (ngModelChange)="getGifs()"
+      autofocus
+      placeholder="Search here !"
+    />
+  </div>
+  <div class="gif_container">
+    <img
+      class="img loading"
+      *ngFor="let giph of giphs"
+      src="{{ giph.images.original.url }}"
+      (click)="imgClicked(giph.images.original.url)"
+    />
+  </div>
+</div>

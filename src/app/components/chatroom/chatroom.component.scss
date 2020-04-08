@@ -1,0 +1,73 @@
+.chatroom_container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  color: #ffffff;
+}
+
+.chat_container {
+  flex: 1;
+  background-color: #000000;
+  padding-top: 20px;
+}
+
+.message_container {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  height: 10vh;
+  background-color: #3b3b3b;
+}
+
+.input {
+  flex: 1;
+  margin: 0px 10px;
+  padding: 10px;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+}
+
+.modal {
+  position: fixed;
+  min-width: 100vw;
+  height: 100vh;
+  top: 0px;
+  left: 0px;
+  z-index: 10000;
+  background-color: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  overflow-y: scroll;
+}
+
+.app_giphy_container {
+  margin: 20px 20%;
+  background-color: #3b3b3b;
+  padding: 20px;
+  height: 85vh;
+  overflow-y: scroll;
+}
+
+.gif_button {
+  padding: 10px;
+  border-radius: 150px;
+  border: none;
+  font-size: 10px;
+  font-weight: bold;
+  color: white;
+  background-color: #ec4176;
+}
+
+.send_button {
+  padding: 8px;
+  border-radius: 20px;
+  border: none;
+  width: 35px;
+  color: white;
+  background-color: #ec4176;
+}
+
+.input_form {
+  display: flex;
+  flex: 1;
+}
